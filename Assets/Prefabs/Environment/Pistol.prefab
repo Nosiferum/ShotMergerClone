@@ -875,6 +875,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1169339553482066708}
   - component: {fileID: 934771809251306764}
+  - component: {fileID: 3685885857441539846}
+  - component: {fileID: 7621144875358898253}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -920,6 +922,35 @@ MonoBehaviour:
   spawnDelay: 1
   forwardSpeed: 3
   horizontalSpeed: 10
+--- !u!54 &3685885857441539846
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977507450263998894}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &7621144875358898253
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977507450263998894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.012009411, y: 0.045458242, z: 0.054492507}
+  m_Center: {x: 1.862645e-10, y: 0.0018453926, z: 0}
 --- !u!1 &2018707952074817039
 GameObject:
   m_ObjectHideFlags: 0
