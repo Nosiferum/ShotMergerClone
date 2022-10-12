@@ -9,6 +9,19 @@ namespace ShotMergerClone.Core
     {
         [field:SerializeField] public float BarrelHealth { get; private set; }
 
+        public Action OnTakenDamage;
+
+        public void TakeDamage()
+        {
+            BarrelHealth--;
+            OnTakenDamage?.Invoke();
+
+            if (BarrelHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 }
 

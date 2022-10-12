@@ -27,6 +27,15 @@ namespace ShotMergerClone.Core
                 Destroy(gameObject);
             }
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent(out Health health))
+            {
+                health.TakeDamage();
+                Destroy(gameObject);
+            }
+        }
     }
 }
 

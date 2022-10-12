@@ -6,8 +6,10 @@ namespace ShotMergerClone.Core
 {
     public class PlayerController : MonoBehaviour
     {
+        [Header("References")]
         [SerializeField] private GameObject bulletGO;
         [SerializeField] private Transform bulletSpawnTransform;
+        [Header("Core")]
         [SerializeField] private float spawnDelay = 2f;
         [SerializeField] private float forwardSpeed = 10f;
         [SerializeField] private float horizontalSpeed = 10f;

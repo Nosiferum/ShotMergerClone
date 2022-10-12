@@ -23,6 +23,21 @@ namespace ShotMergerClone.UI
         {
             healthText.text = health.BarrelHealth.ToString(CultureInfo.InvariantCulture);
         }
+
+        private void UpdateUI()
+        {
+            healthText.text = health.BarrelHealth.ToString(CultureInfo.InvariantCulture);
+        }
+
+        private void OnEnable()
+        {
+            health.OnTakenDamage += UpdateUI;
+        }
+
+        private void OnDisable()
+        {
+            health.OnTakenDamage -= UpdateUI;
+        }
     }
 }
 
