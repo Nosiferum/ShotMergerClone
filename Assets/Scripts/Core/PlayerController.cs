@@ -4,19 +4,14 @@ using UnityEngine;
 
 namespace ShotMergerClone.Core
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : BulletSpawner
     {
-        [Header("References")]
-        [SerializeField] private GameObject bulletGO;
-        [SerializeField] private Transform bulletSpawnTransform;
-        [Header("Core")]
-        [SerializeField] private float spawnDelay = 2f;
         [SerializeField] private float forwardSpeed = 10f;
         [SerializeField] private float horizontalSpeed = 10f;
+        [field: SerializeField] public Transform AdditiveTransform { get; private set; }
 
         private float minXClamp = -2.07f;
         private float maxXClamp = 2.083f;
-        private float innerSpawnDelay;
 
         private Action playerState;
 
@@ -43,17 +38,6 @@ namespace ShotMergerClone.Core
             }
         }
 
-        private void SpawnProjectile()
-        {
-            innerSpawnDelay -= Time.deltaTime;
-
-            if (innerSpawnDelay <= 0)
-            {
-                Instantiate(bulletGO, bulletSpawnTransform.position, bulletGO.transform.rotation);
-                innerSpawnDelay = spawnDelay;
-            }
-        }
-
         private void StartBroadcast()
         {
             playerState = GamePlayState;
@@ -61,8 +45,6 @@ namespace ShotMergerClone.Core
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Aa");
-
             if (other.TryGetComponent(out Health health))
             {
                 GameManager.GameFail();
