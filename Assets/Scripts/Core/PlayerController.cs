@@ -9,18 +9,30 @@ namespace ShotMergerClone.Core
         [SerializeField] private GameObject bulletGO;
         [SerializeField] private Transform bulletSpawnTransform;
         [SerializeField] private float spawnDelay = 2f;
+        [SerializeField] private float movementSpeed = 10f;
 
         private float innerSpawnDelay;
         private Action playerState;
 
-        private void Start()
-        {
-            innerSpawnDelay = spawnDelay;
-        }
-
         private void Update()
         {
             playerState?.Invoke();
+        }
+
+        private void GamePlayState()
+        {
+            Move();
+            SpawnProjectile();
+        }
+
+        private void Move()
+        {
+            transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime, Space.World);
+
+            if (Input.GetMouseButton(0))
+            {
+                transform.Translate(new Vector3(0, -InputManager.Delta.x, 0));
+            }
         }
 
         private void SpawnProjectile()
@@ -36,7 +48,7 @@ namespace ShotMergerClone.Core
 
         private void StartBroadcast()
         {
-            playerState = SpawnProjectile;
+            playerState = GamePlayState;
         }
 
         private void OnEnable()

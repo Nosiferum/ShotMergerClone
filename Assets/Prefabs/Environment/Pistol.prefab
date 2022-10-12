@@ -918,6 +918,7 @@ MonoBehaviour:
   bulletGO: {fileID: 8883311055583582542, guid: 4be7f01148da4144c94c6ffd68b02565, type: 3}
   bulletSpawnTransform: {fileID: 6431022919475998329}
   spawnDelay: 1
+  movementSpeed: 3
 --- !u!1 &2018707952074817039
 GameObject:
   m_ObjectHideFlags: 0
