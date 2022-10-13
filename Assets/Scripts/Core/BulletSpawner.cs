@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ShotMergerClone.Core
 {
@@ -6,9 +7,9 @@ namespace ShotMergerClone.Core
     {
         [Header("References")]
         [SerializeField] protected GameObject bulletGO;
-        [SerializeField] protected Transform bulletSpawnTransform; 
+        [SerializeField] protected Transform bulletSpawnTransform;
         [Header("Core")]
-        [SerializeField] protected float spawnDelay = 2f;
+        [SerializeField] protected float bulletSpawnDelay = 2f;
 
         protected float innerSpawnDelay;
 
@@ -19,7 +20,7 @@ namespace ShotMergerClone.Core
             if (innerSpawnDelay <= 0)
             {
                 Instantiate(bulletGO, bulletSpawnTransform.position, bulletGO.transform.rotation);
-                innerSpawnDelay = spawnDelay;
+                innerSpawnDelay = bulletSpawnDelay;
             }
         }
     }

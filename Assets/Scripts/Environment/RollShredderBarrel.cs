@@ -2,7 +2,7 @@ using DG.Tweening;
 using ShotMergerClone.Managers;
 using UnityEngine;
 
-namespace Twenty.Collectibles
+namespace ShotMergerClone.Environment
 {
     public class RollShredderBarrel : RollShredder
     {

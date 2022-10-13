@@ -51,10 +51,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletGO: {fileID: 8883311055583582542, guid: 4be7f01148da4144c94c6ffd68b02565, type: 3}
   bulletSpawnTransform: {fileID: 6431022919475998329}
-  spawnDelay: 1
+  bulletSpawnDelay: 0.6
   forwardSpeed: 3
   horizontalSpeed: 10
   <AdditiveTransform>k__BackingField: {fileID: 2003597108391720735}
+  IsAdditiveListEmpty: 1
 --- !u!54 &3685885857441539846
 Rigidbody:
   m_ObjectHideFlags: 0

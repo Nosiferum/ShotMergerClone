@@ -1,9 +1,10 @@
 using EzySlice;
 using ShotMergerClone.Core;
 using ShotMergerClone.Utils;
+using System.Linq;
 using UnityEngine;
 
-namespace Twenty.Collectibles
+namespace ShotMergerClone.Environment
 {
     public class RollShredder : MonoBehaviour
     {
@@ -36,16 +37,18 @@ namespace Twenty.Collectibles
 
                         Destroy(newAdditive.GetComponent<AdditiveWrapper>());
 
-                        newAdditive.GetComponent<AdditiveParentController>().StartShooting();
+                        var newAdditiveParentController = newAdditive.GetComponent<AdditiveParentController>();
+
+                        playerController.FirstParentController.Add(newAdditiveParentController);
+
+                        newAdditiveParentController.StartShooting();
                     }
 
                     playerController.FirstParentController.Remove(additiveParentController);
-                    
+                    playerController.FirstParentController.Last().tag = "Addable";
+
                     if (playerController.FirstParentController.Count == 0)
-                    {
-                        Debug.Log("aa");
                         playerController.IsAdditiveListEmpty = true;
-                    }
 
                     Destroy(other.transform.parent.gameObject);
 

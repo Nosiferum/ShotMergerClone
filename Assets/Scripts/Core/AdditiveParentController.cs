@@ -6,7 +6,7 @@ namespace ShotMergerClone.Core
     public class AdditiveParentController : MonoBehaviour
     {
         [field: SerializeField] public GameObject DowngradedAdditiveGO { get; private set; }
-        [field: SerializeField] public int CollectorAdditorColumnHeight { get; set; }
+        [field: SerializeField] public int CollectorAdditorColumnHeight { get; set; } = 1;
 
         private AdditiveController[] additiveControllers;
 
@@ -36,11 +36,23 @@ namespace ShotMergerClone.Core
 
             else if (other.TryGetComponent(out AdditiveWrapper additiveWrapper))
             {
+                if (!transform.CompareTag("Addable"))
+                    return;
+                
                 Destroy(additiveWrapper);
+                transform.tag = "None";
 
                 Transform otherTransform = other.transform;
                 otherTransform.SetParent(gameObject.transform.parent.transform);
-                otherTransform.position = GetComponent<Collider>().bounds.center + new Vector3(0, 0, 0.25f);
+
+                if (CollectorAdditorColumnHeight == 1)
+                    otherTransform.position = GetComponent<Collider>().bounds.center + new Vector3(0, 0, 0.27f);
+
+                else if (CollectorAdditorColumnHeight == 2)
+                    otherTransform.position = GetComponent<Collider>().bounds.center + new Vector3(0, 0, 0.38f);
+
+                else if (CollectorAdditorColumnHeight == 3)
+                    otherTransform.position = GetComponent<Collider>().bounds.center + new Vector3(0, 0, 0.50f);
 
                 var otherAdditiveParentController = other.GetComponent<AdditiveParentController>();
 

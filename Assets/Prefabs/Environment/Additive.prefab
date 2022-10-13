@@ -112,4 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletGO: {fileID: 8883311055583582542, guid: 4be7f01148da4144c94c6ffd68b02565, type: 3}
   bulletSpawnTransform: {fileID: 8648286374937398608}
-  spawnDelay: 2
+  bulletSpawnDelay: 0.6

@@ -1,13 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ShotMergerClone.Core
 {
     public class BulletController : MonoBehaviour
     {
-        [SerializeField] private float firingSpeed = 10f;
+        [SerializeField] private float bulletForwardSpeed = 10f;
+        [SerializeField] private float totalLifespan = 2f;
 
         private float lifespan = 0;
 
@@ -20,9 +18,9 @@ namespace ShotMergerClone.Core
         {
             lifespan += Time.deltaTime;
 
-            transform.Translate(Vector3.up * Time.deltaTime * firingSpeed, Space.Self);
+            transform.Translate(Vector3.up * Time.deltaTime * bulletForwardSpeed, Space.Self);
 
-            if (lifespan >= 3f)
+            if (lifespan >= totalLifespan)
             {
                 Destroy(gameObject);
             }

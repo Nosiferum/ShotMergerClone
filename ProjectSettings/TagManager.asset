@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Additive
+  - Addable
+  - None
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8921303896613091329}
   m_Layer: 0
   m_Name: 1+
-  m_TagString: Untagged
+  m_TagString: Addable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373bb4d6bb0071f4cb7b418fbebdfd07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <DowngradedAdditiveGO>k__BackingField: {fileID: 0}
+  <CollectorAdditorColumnHeight>k__BackingField: 1
 --- !u!65 &7248933564305199061
 BoxCollider:
   m_ObjectHideFlags: 0

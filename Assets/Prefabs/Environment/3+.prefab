@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: <DowngradedAdditiveGO>k__BackingField
       value: 
       objectReference: {fileID: 3529359233675988217, guid: d3fa90fa32714da4a9d8bb177e7f85e4, type: 3}
+    - target: {fileID: 6750409689965735879, guid: 181f6358f5280b34890c4ad12d6fc48b, type: 3}
+      propertyPath: <CollectorAdditorColumnHeight>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7248933564305199061, guid: 181f6358f5280b34890c4ad12d6fc48b, type: 3}
       propertyPath: m_Size.z
       value: 0.7670792

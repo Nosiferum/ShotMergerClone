@@ -47,14 +47,21 @@ namespace ShotMergerClone.Core
             playerState = GamePlayState;
         }
 
+        private void EndBroadcast()
+        {
+            playerState = null;
+        }
+
         private void OnEnable()
         {
             GameManager.onLevelStart += StartBroadcast;
+            GameManager.onLevelOver += EndBroadcast;
         }
 
         private void OnDisable()
         {
             GameManager.onLevelStart -= StartBroadcast;
+            GameManager.onLevelOver -= EndBroadcast;
         }
     }
 }
