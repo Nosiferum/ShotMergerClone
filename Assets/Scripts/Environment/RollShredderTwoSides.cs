@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using EzySlice;
+using ShotMergerClone.Core;
 using UnityEngine;
 
 namespace Twenty.Collectibles
@@ -25,7 +26,19 @@ namespace Twenty.Collectibles
                     GameObject lowerHull = hull1.CreateLowerHull(other.gameObject, null);
                     GameObject upperHull = hull1.CreateUpperHull(other.gameObject, null);
 
-                    Destroy(other.transform.gameObject);
+                    var additiveParentController = other.GetComponentInParent<AdditiveParentController>();
+                    var playerController = other.GetComponentInParent<PlayerController>();
+
+                    if (additiveParentController.DowngradedAdditiveGO != null)
+                    {
+                        var newAdditive = Instantiate(additiveParentController.DowngradedAdditiveGO,other.transform.parent.transform.position,
+                            Quaternion.identity, playerController.transform);
+
+                        newAdditive.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+                        newAdditive.GetComponent<AdditiveParentController>().StartShooting();
+                    }
+                   
+                    Destroy(other.transform.parent.gameObject);
 
                     AddForceToHull(lowerHull);
                     AddForceToHull(upperHull);
@@ -40,7 +53,7 @@ namespace Twenty.Collectibles
             rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
             var meshCollider = hull.AddComponent<MeshCollider>();
             meshCollider.convex = true;
-            rb.AddForce(-new Vector3(1, -2, 0), ForceMode.Impulse);
+            rb.AddForce(-new Vector3(2, -4, 0), ForceMode.Impulse);
         }
     }
 }

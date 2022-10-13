@@ -5,6 +5,8 @@ namespace ShotMergerClone.Core
 {
     public class AdditiveParentController : MonoBehaviour
     {
+        [field:SerializeField] public GameObject DowngradedAdditiveGO { get; private set; }
+
         private AdditiveController[] additiveControllers;
 
         private void Awake()
