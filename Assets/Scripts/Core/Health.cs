@@ -19,7 +19,7 @@ namespace ShotMergerClone.Core
 
             if (BarrelHealth <= 0)
             {
-                transform.DOShakeScale(0.2f).OnComplete(delegate { Destroy(gameObject); });
+                transform.DOShakeScale(0.2f).OnComplete(delegate { Destroy(gameObject); }).SetLink(gameObject);
             }
         }
 
