@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using ShotMergerClone.Managers;
 using UnityEngine;
 
 namespace ShotMergerClone.Core
@@ -22,6 +23,15 @@ namespace ShotMergerClone.Core
                 transform.DOShakeScale(0.2f).OnComplete(delegate { Destroy(gameObject); }).SetLink(gameObject);
             }
         }
+
+        /*private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                GameManager.GameFail();
+                Destroy(other.gameObject);
+            }
+        }*/
 
     }
 }

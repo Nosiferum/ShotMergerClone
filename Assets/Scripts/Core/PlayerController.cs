@@ -43,15 +43,6 @@ namespace ShotMergerClone.Core
             playerState = GamePlayState;
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out Health health))
-            {
-                GameManager.GameFail();
-                Destroy(gameObject);
-            }
-        }
-
         private void OnEnable()
         {
             GameManager.onLevelStart += StartBroadcast;
