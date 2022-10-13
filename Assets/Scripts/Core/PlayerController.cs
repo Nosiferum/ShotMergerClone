@@ -7,11 +7,12 @@ namespace ShotMergerClone.Core
 {
     public class PlayerController : BulletSpawner
     {
-        [SerializeField] private float forwardSpeed = 10f;
-        [SerializeField] private float horizontalSpeed = 10f;
+        [field:SerializeField] public float ForwardSpeed { get; set; } = 10f;
         [field: SerializeField] public Transform AdditiveTransform { get; private set; }
+        
+        [SerializeField] private float horizontalSpeed = 10f;
 
-         public List<AdditiveParentController> FirstParentController { get; set; } = new();
+        public List<AdditiveParentController> FirstParentController { get; set; } = new();
          public bool IsAdditiveListEmpty = true;
 
         private float minXClamp = -2.07f;
@@ -32,7 +33,7 @@ namespace ShotMergerClone.Core
 
         private void Move()
         {
-            transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime, Space.World);
+            transform.Translate(Vector3.forward * ForwardSpeed * Time.deltaTime, Space.World);
 
             if (Input.GetMouseButton(0))
             {
