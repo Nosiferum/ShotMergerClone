@@ -1,12 +1,11 @@
 using EzySlice;
 using ShotMergerClone.Core;
-using ShotMergerClone.Managers;
 using ShotMergerClone.Utils;
 using UnityEngine;
 
 namespace Twenty.Collectibles
 {
-    public class RollShredderTwoSides : MonoBehaviour
+    public class RollShredder : MonoBehaviour
     {
         public SlicedHull SliceObject(GameObject obj, Transform sideTransform, Material crossSectionMaterial = null)
         {
@@ -14,7 +13,7 @@ namespace Twenty.Collectibles
             return obj.Slice(sideTransform.position, transform.right, crossSectionMaterial);
         }
 
-        private void OnTriggerEnter(Collider other)
+        protected virtual void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Additive"))
             {
@@ -40,25 +39,15 @@ namespace Twenty.Collectibles
                         newAdditive.GetComponent<AdditiveParentController>().StartShooting();
                     }
 
+                    playerController.FirstParentController.Remove(additiveParentController);
+                    
+                    if (playerController.FirstParentController.Count == 0)
+                    {
+                        Debug.Log("aa");
+                        playerController.IsAdditiveListEmpty = true;
+                    }
+
                     Destroy(other.transform.parent.gameObject);
-
-                    AddForceToHull(lowerHull);
-                    AddForceToHull(upperHull);
-                }
-            }
-
-            else if (other.CompareTag("Player"))
-            {
-                SlicedHull hull1 = SliceObject(other.gameObject, transform);
-
-                if (hull1 != null)
-                {
-                    GameObject lowerHull = hull1.CreateLowerHull(other.gameObject, null);
-                    GameObject upperHull = hull1.CreateUpperHull(other.gameObject, null);
-
-                    // var playerController = other.GetComponent<PlayerController>();
-                    GameManager.GameFail();
-                    Destroy(other.gameObject);
 
                     AddForceToHull(lowerHull);
                     AddForceToHull(upperHull);
@@ -66,7 +55,7 @@ namespace Twenty.Collectibles
             }
         }
 
-        private void AddForceToHull(GameObject hull)
+        protected void AddForceToHull(GameObject hull)
         {
             var rb = hull.AddComponent<Rigidbody>();
             rb.constraints = RigidbodyConstraints.FreezePositionZ;

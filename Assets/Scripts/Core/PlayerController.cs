@@ -1,5 +1,6 @@
 using ShotMergerClone.Managers;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ShotMergerClone.Core
@@ -9,6 +10,9 @@ namespace ShotMergerClone.Core
         [SerializeField] private float forwardSpeed = 10f;
         [SerializeField] private float horizontalSpeed = 10f;
         [field: SerializeField] public Transform AdditiveTransform { get; private set; }
+
+         public List<AdditiveParentController> FirstParentController { get; set; } = new();
+         public bool IsAdditiveListEmpty = true;
 
         private float minXClamp = -2.07f;
         private float maxXClamp = 2.083f;

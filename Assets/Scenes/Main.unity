@@ -533,10 +533,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203026231}
     m_Modifications:
-    - target: {fileID: 880990708119536989, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
-      propertyPath: <BarrelHealth>k__BackingField
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4727538551271484577, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_Name
       value: Barrel (5)
@@ -599,10 +595,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203026231}
     m_Modifications:
-    - target: {fileID: 880990708119536989, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
-      propertyPath: <BarrelHealth>k__BackingField
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4727538551271484577, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_Name
       value: Barrel (1)
@@ -621,7 +613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390887847130576411, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.49
+      value: 18.42
       objectReference: {fileID: 0}
     - target: {fileID: 5390887847130576411, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1018,10 +1010,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203026231}
     m_Modifications:
-    - target: {fileID: 880990708119536989, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
-      propertyPath: <BarrelHealth>k__BackingField
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4727538551271484577, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_Name
       value: Barrel (6)
@@ -1491,10 +1479,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203026231}
     m_Modifications:
-    - target: {fileID: 880990708119536989, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
-      propertyPath: <BarrelHealth>k__BackingField
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4727538551271484577, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_Name
       value: Barrel (3)
@@ -1676,10 +1660,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203026231}
     m_Modifications:
-    - target: {fileID: 880990708119536989, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
-      propertyPath: <BarrelHealth>k__BackingField
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4727538551271484577, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_Name
       value: Barrel
@@ -1698,7 +1678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390887847130576411, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.49
+      value: 18.42
       objectReference: {fileID: 0}
     - target: {fileID: 5390887847130576411, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1742,10 +1722,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203026231}
     m_Modifications:
-    - target: {fileID: 880990708119536989, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
-      propertyPath: <BarrelHealth>k__BackingField
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4727538551271484577, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_Name
       value: Barrel (4)
@@ -1764,7 +1740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5390887847130576411, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.49
+      value: 18.42
       objectReference: {fileID: 0}
     - target: {fileID: 5390887847130576411, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1962,10 +1938,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203026231}
     m_Modifications:
-    - target: {fileID: 880990708119536989, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
-      propertyPath: <BarrelHealth>k__BackingField
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4727538551271484577, guid: 679881968e7aa79428e817cea4c614fc, type: 3}
       propertyPath: m_Name
       value: Barrel (2)
@@ -2176,6 +2148,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3636457160121889413, guid: e0c8e7ba754642e4e87bbe2bec5f94c2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636457160121889413, guid: e0c8e7ba754642e4e87bbe2bec5f94c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2185,7 +2161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3636457160121889413, guid: e0c8e7ba754642e4e87bbe2bec5f94c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 67.4
+      value: 52.4
       objectReference: {fileID: 0}
     - target: {fileID: 3636457160121889413, guid: e0c8e7ba754642e4e87bbe2bec5f94c2, type: 3}
       propertyPath: m_LocalRotation.w
