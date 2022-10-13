@@ -52,7 +52,7 @@ MonoBehaviour:
   bulletGO: {fileID: 8883311055583582542, guid: 4be7f01148da4144c94c6ffd68b02565, type: 3}
   bulletSpawnTransform: {fileID: 6431022919475998329}
   bulletSpawnDelay: 0.6
-  <ForwardSpeed>k__BackingField: 3
+  <ForwardSpeed>k__BackingField: 4
   <AdditiveTransform>k__BackingField: {fileID: 2003597108391720735}
   horizontalSpeed: 7
   IsAdditiveListEmpty: 1

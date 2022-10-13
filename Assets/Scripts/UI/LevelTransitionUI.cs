@@ -13,24 +13,15 @@ namespace Twenty.UI
         [SerializeField] private GameObject losePanel;
 
         [Header("Buttons")]
-        [SerializeField] private Button nextButton;
         [SerializeField] private Button retryButton;
         [SerializeField] private Button levelRetryButton;
 
         private void Awake()
         {
-            if (nextButton != null)
-                nextButton.onClick.AddListener(NextLevel);
             if (retryButton != null)
                 retryButton.onClick.AddListener(Retry); 
             if (levelRetryButton != null)
                 levelRetryButton.onClick.AddListener(LevelRetry);
-        }
-
-        private void NextLevel()
-        {
-            //SceneManager.LoadScene(1);
-            nextButton.interactable = false;
         }
 
         private void Retry()

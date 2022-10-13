@@ -12,7 +12,7 @@ namespace ShotMergerClone.Environment
         {
             if (other.TryGetComponent(out PlayerController playerController))
             {
-                playerController.ForwardSpeed += .3f;
+                playerController.ForwardSpeed += .4f;
             }
         }
     }

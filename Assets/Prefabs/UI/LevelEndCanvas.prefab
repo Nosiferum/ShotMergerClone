@@ -184,7 +184,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winPanel: {fileID: 2594595497095563793}
   losePanel: {fileID: 2594595496828607910}
-  nextButton: {fileID: 8682152329955078553}
   retryButton: {fileID: 7287299878379342069}
   levelRetryButton: {fileID: 3828653521421567583}
 --- !u!1 &2594595496828607910
@@ -893,7 +892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -0.00012207031, y: 103.8661}
+  m_AnchoredPosition: {x: -0.00024414062, y: 103.8661}
   m_SizeDelta: {x: -28.167, y: 257.7323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3009813725912224155
@@ -1076,7 +1075,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8165929503460799687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,7 +1263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -0.00012207031, y: 103.8661}
+  m_AnchoredPosition: {x: -0.00024414062, y: 103.8661}
   m_SizeDelta: {x: -28.167, y: 257.7323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5836658864168411228

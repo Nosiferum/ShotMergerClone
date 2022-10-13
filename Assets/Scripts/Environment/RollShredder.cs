@@ -45,9 +45,11 @@ namespace ShotMergerClone.Environment
                     }
 
                     playerController.FirstParentController.Remove(additiveParentController);
-                    playerController.FirstParentController.Last().tag = "Addable";
+                    
+                    if (playerController.FirstParentController.Count != 0)
+                        playerController.FirstParentController.Last().tag = "Addable";
 
-                    if (playerController.FirstParentController.Count == 0)
+                    else if (playerController.FirstParentController.Count == 0)
                         playerController.IsAdditiveListEmpty = true;
 
                     Destroy(other.transform.parent.gameObject);
