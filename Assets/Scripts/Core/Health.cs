@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace ShotMergerClone.Core
@@ -18,7 +19,7 @@ namespace ShotMergerClone.Core
 
             if (BarrelHealth <= 0)
             {
-                Destroy(gameObject);
+                transform.DOShakeScale(0.2f).OnComplete(delegate { Destroy(gameObject); });
             }
         }
 

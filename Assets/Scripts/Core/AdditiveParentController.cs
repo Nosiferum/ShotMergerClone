@@ -18,21 +18,27 @@ namespace ShotMergerClone.Core
             {
                 Destroy(GetComponent<AdditiveWrapper>());
                 transform.SetParent(other.gameObject.transform);
-                 transform.position = playerController.AdditiveTransform.position;
+                transform.position = playerController.AdditiveTransform.position;
 
-                foreach (var additiveController in additiveControllers)
-                    additiveController.OnAdditivePickedUp?.Invoke();
+                StartShooting();
             }
 
             else if (other.TryGetComponent(out AdditiveWrapper additiveWrapper))
             {
                 Destroy(additiveWrapper);
-                other.transform.SetParent(gameObject.transform.parent.transform);
-                other.transform.position = GetComponent<Collider>().bounds.center + new Vector3(0,0, 0.25f);
 
-                foreach (var additiveController in additiveControllers)
-                    additiveController.OnAdditivePickedUp?.Invoke();
+                Transform otherTransform = other.transform;
+                otherTransform.SetParent(gameObject.transform.parent.transform);
+                otherTransform.position = GetComponent<Collider>().bounds.center + new Vector3(0, 0, 0.25f);
+
+                other.GetComponent<AdditiveParentController>().StartShooting();
             }
+        }
+
+        public void StartShooting()
+        {
+            foreach (var additiveController in additiveControllers)
+                additiveController.OnAdditivePickedUp?.Invoke();
         }
     }
 }

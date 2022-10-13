@@ -7,7 +7,7 @@ namespace ShotMergerClone.Core
 {
     public class AdditiveController : BulletSpawner
     {
-        [SerializeField] private int additiveNumber = 1;
+      //  [SerializeField] private int additiveNumber = 1;
 
         public Action OnAdditivePickedUp;
         private Action additiveState;

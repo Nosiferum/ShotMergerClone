@@ -26,7 +26,8 @@ namespace ShotMergerClone.UI
 
         private void UpdateUI()
         {
-            healthText.text = health.BarrelHealth.ToString(CultureInfo.InvariantCulture);
+            if (health.BarrelHealth >= 0)
+                healthText.text = health.BarrelHealth.ToString(CultureInfo.InvariantCulture);
         }
 
         private void OnEnable()
