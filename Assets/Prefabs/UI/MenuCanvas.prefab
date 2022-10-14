@@ -337,6 +337,7 @@ GameObject:
   - component: {fileID: 7354926170010868659}
   - component: {fileID: 1031951830979457966}
   - component: {fileID: 8048869271194855667}
+  - component: {fileID: 7168288322983400990}
   m_Layer: 5
   m_Name: hand
   m_TagString: Untagged
@@ -402,6 +403,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7168288322983400990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110614136558727767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bafa1dcc16f78246a996d327de25389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isIndependentFromTimeScale: 0
+  animationTime: 1
+  animationEase: 1
+  canLoop: 1
+  loopCount: -1
+  loopType: 1
+  posChange: 1
+  startPos: {x: -114, y: -100}
+  endPos: {x: 190, y: -100}
+  scaleChange: 0
+  startScale: {x: 1, y: 1, z: 1}
+  endScale: {x: 1, y: 1, z: 1}
+  rotChange: 0
+  startRot: {x: 0, y: 0, z: 0}
+  endRot: {x: 0, y: 0, z: 0}
 --- !u!1 &9014247165812256835
 GameObject:
   m_ObjectHideFlags: 0

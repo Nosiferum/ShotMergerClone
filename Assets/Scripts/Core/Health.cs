@@ -23,16 +23,6 @@ namespace ShotMergerClone.Core
                 transform.DOShakeScale(0.2f).OnComplete(delegate { Destroy(gameObject); }).SetLink(gameObject);
             }
         }
-
-        /*private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Player"))
-            {
-                GameManager.GameFail();
-                Destroy(other.gameObject);
-            }
-        }*/
-
     }
 }
 
