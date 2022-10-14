@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
-using ShotMergerClone.Managers;
+using MoreMountains.NiceVibrations;
 using UnityEngine;
 
 namespace ShotMergerClone.Core
@@ -10,6 +8,8 @@ namespace ShotMergerClone.Core
     public class Health : MonoBehaviour
     {
         [field:SerializeField] public float BarrelHealth { get; private set; }
+        
+        [SerializeField] private ParticleSystem particleSystem;
 
         public Action OnTakenDamage;
 
@@ -17,10 +17,16 @@ namespace ShotMergerClone.Core
         {
             BarrelHealth--;
             OnTakenDamage?.Invoke();
+            MMVibrationManager.Haptic(HapticTypes.LightImpact);
 
             if (BarrelHealth <= 0)
             {
-                transform.DOShakeScale(0.2f).OnComplete(delegate { Destroy(gameObject); }).SetLink(gameObject);
+                transform.DOShakeScale(0.2f).OnComplete(delegate
+                {
+                    particleSystem.Play(); 
+                    Destroy(gameObject, 0.1f);
+
+                }).SetLink(gameObject);
             }
         }
     }

@@ -1,4 +1,5 @@
 using EzySlice;
+using MoreMountains.NiceVibrations;
 using ShotMergerClone.Core;
 using ShotMergerClone.Utils;
 using System.Linq;
@@ -53,6 +54,8 @@ namespace ShotMergerClone.Environment
                         playerController.IsAdditiveListEmpty = true;
 
                     Destroy(other.transform.parent.gameObject);
+
+                    MMVibrationManager.Haptic(HapticTypes.MediumImpact);
 
                     AddForceToHull(lowerHull);
                     AddForceToHull(upperHull);
