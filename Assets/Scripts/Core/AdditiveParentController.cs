@@ -28,7 +28,6 @@ namespace ShotMergerClone.Core
 
                     playerController.IsAdditiveListEmpty = false;
                     playerController.FirstParentController.Add(this);
-                    // playerController.FirstParentController = this;
 
                     StartShooting();
                 }
