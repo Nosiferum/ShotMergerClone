@@ -1,3 +1,4 @@
+using MoreMountains.NiceVibrations;
 using ShotMergerClone.Utils;
 using UnityEngine;
 
@@ -29,6 +30,8 @@ namespace ShotMergerClone.Core
                     playerController.IsAdditiveListEmpty = false;
                     playerController.FirstParentController.Add(this);
 
+                    MMVibrationManager.Haptic(HapticTypes.LightImpact);
+
                     StartShooting();
                 }
             }
@@ -56,6 +59,8 @@ namespace ShotMergerClone.Core
                 var otherAdditiveParentController = other.GetComponent<AdditiveParentController>();
 
                 GetComponentInParent<PlayerController>().FirstParentController.Add(otherAdditiveParentController);
+
+                MMVibrationManager.Haptic(HapticTypes.LightImpact);
 
                 otherAdditiveParentController.StartShooting();
             }
